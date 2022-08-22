@@ -1,18 +1,17 @@
 <template>
   <div>
-    <Header/>
-      <router-view></router-view>
+    <Header />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from '@/components/NavegacaoAskon.vue'
+import Header from "@/components/NavBarAskon.vue";
 export default {
   components: {
-    Header
-  }
-}
+    Header,
+  },
+};
 </script>
 
-<style>
-</style>
+<style></style>

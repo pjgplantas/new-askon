@@ -1,23 +1,55 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeAskon from "@/views/HomeAskon.vue";
+import CriarResenhaAskon from "@/views/CriarResenhaAskon.vue";
+import AboutAskon from "@/components/AboutAskon.vue";
+import LoginAskon from "@/views/LoginAndRegisterAskon.vue";
+import Resenha from "@/views/ResenhaAskon.vue";
+import PerfilAskon from "@/views/PerfilAskon.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    component: () => import("@/layouts/DefaultAskon.vue"),
+    children: [
+      {
+        path: "",
+        component: HomeAskon,
+      },
+      {
+        path: "/criar",
+        alias: "/resenha",
+        component: CriarResenhaAskon,
+        props: true,
+      },
+      {
+        path: "/sobre",
+        alias: "/sobrenos",
+        component: AboutAskon,
+        props: true,
+      },
+      {
+        path: "/resenha",
+        component: Resenha,
+      },
+    ],
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "",
+    name: "blank",
+    component: () => import("@/layouts/BlankAskon.vue"),
+    children: [
+      {
+        path: "/login",
+        component: LoginAskon,
+      },
+      {
+        path: "/perfil",
+        component: PerfilAskon,
+      },
+    ],
   },
 ];
 
