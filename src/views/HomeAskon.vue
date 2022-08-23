@@ -8,7 +8,9 @@
             <div class="texto-nav">perfil</div>
             <div class="texto-nav">criar</div>
         </div>
-        <div class="box-lateral"></div>
+        <div class="box-lateral">
+            <div class="borda-lateral"></div>
+        </div>
     </div>
   </div>
 </template>
@@ -36,12 +38,23 @@ export default {
     display: flex;
 }
 .box-lateral {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 33% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 33% 100%, 0% 100%);
     width: 70px;
     height: 100%;
+    background-color: #4630AB;
+    border-bottom: 1px solid #4630AB;
+    box-sizing: border-box;
+}
+.borda-lateral {
+    -webkit-clip-path: polygon(0 0, 95% 0%, 30% 100%, 0% 100%);
+    clip-path: polygon(0 0, 95% 0%, 30% 100%, 0% 100%);
+    width: 70px;
+    height: 99%;
+    position: relative;
+    left: 0;
+    top: 0;
     background-color: #111;
-    outline: #4630AB;
 }
 .box-conteudo {
     width: 600px;
@@ -49,7 +62,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-bottom: 3px solid #4630AB;
+    box-sizing: border-box;
+    border-bottom: 2px solid #4630AB;
 }
 .box-conteudo::after {
     -webkit-clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
@@ -57,14 +71,14 @@ export default {
     width: 70px;
     height: 100%;
     background-color: #111;
-    border-bottom: 3px solid #4630AB;
+    border-bottom: 2px solid #4630AB;
 }
 .logo-nav {
     width: 120px;
-    height: 100%;
-    background-image: url(../assets/logo.png);
+    height: 90%;
+    background-image: url(../assets/Logo2.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .texto-nav {
     color: #c9c9c9;
