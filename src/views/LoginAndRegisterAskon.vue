@@ -31,7 +31,17 @@
     <div class="box-imagem">
         <div class="imagem"></div>
     </div>
-    <div class="box-recuperar"></div>
+    <div class="box-recuperar">
+        <div class="img-login"></div>
+        <div class="box-texto-recuperar" v-show="recuperar == 'email'">
+            <input type="text" class="input-login" placeholder="Email">
+            <button class="btn-login" @click="recuperar = 'codigo'">enviar codigo</button>
+        </div>
+        <div class="box-texto-recuperar" v-show="recuperar == 'codigo'">
+            <input type="number" class="input-login" placeholder="Código" pattern="[0-9]+">
+            <button class="btn-login" @click="mostrar = 'login', recuperar = 'email'">Entrar</button>
+        </div>
+    </div>
   </div>
 </div>
 </template>
@@ -40,7 +50,8 @@
 export default {
     data (){
         return {
-            mostrar: "login"
+            mostrar: "login",
+            recuperar: "email"
         }
     }
 };
@@ -167,4 +178,48 @@ export default {
 }
 
 /* ---------- Recuperar ---------- */
+
+.recuperar {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+.recuperar .box-imagem {
+  -webkit-clip-path: ellipse(54% 58% at 0% 100%);
+  clip-path: ellipse(54% 58% at 0% 100%);
+  width: 1700px;
+  height: 1000px;
+  background-image: url(../assets/Poro.jpg);
+  background-position-x: 0%;
+  background-position-y: 100%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.recuperar .imagem { 
+    -webkit-clip-path: ellipse(54% 58% at 0% 100%);
+    clip-path: ellipse(54% 58% at 0% 100%);
+    width: 1700px;
+    height: 1000px;
+    background-color: rgba(70, 48, 171, 0.6);
+}
+.box-recuperar {
+    width: 800px;
+    height: 400px;
+    margin: 200px 920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box-texto-recuperar {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;  
+}
 </style>
