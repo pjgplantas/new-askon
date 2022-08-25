@@ -1,59 +1,59 @@
 <template>
-<div class="tudo">
-  <transition name='fade-login' mode="in-out">
-      <div>
+  <div class="tudo">
+    <transition name='fade-login' mode="in-out">
         <div>
-          <div :class="action == 'login' ? 'direita' : 'esquerda'">
-            <div :class="action == 'login' ? 'img-direita' : 'img-esquerda'"></div>
+          <div>
+            <div :class="action == 'login' ? 'direita' : 'esquerda'">
+              <div :class="action == 'login' ? 'img-direita' : 'img-esquerda'"></div>
+            </div>
           </div>
-        </div>
-          <div v-if="action == 'login'" class="login" key="login">
+            <div v-if="action == 'login'" class="login" key="login">
+            <form method="post">
+              <div class="container-login">
+                <div class="img-login"></div>
+                <input type="text" class="input-login" placeholder="Nome">
+                <input type="text" class="input-login" placeholder="Senha">
+                <p class="sub-texto" @click.prevent="action = 'recuperar'">esqueci minha senha</p>
+                <button class="btn-login">Entrar</button>
+                <p class="sub-texto">Novo no site?</p>
+                <button class="btn-login" @click.prevent="ChangeAction('registrar')">Registrar</button>
+              </div>
+            </form>  
+          </div>
+          
+          
+        <div class="registrar" v-if="action == 'registrar'" key="registrar">
           <form method="post">
-            <div class="container-login">
+            <div class="container-registrar">
               <div class="img-login"></div>
-              <input type="text" class="input-login" placeholder="Nome">
+              <input type="text" class="input-login" placeholder="Email">
+              <input type="text" class="input-login" placeholder="Nome de Usuário">
               <input type="text" class="input-login" placeholder="Senha">
-              <p class="sub-texto" @click.prevent="action = 'recuperar'">esqueci minha senha</p>
-              <button class="btn-login">Entrar</button>
-              <p class="sub-texto">Novo no site?</p>
-              <button class="btn-login" @click.prevent="ChangeAction('registrar')">Registrar</button>
+              <input type="text" class="input-login" placeholder="Confirmar Senha">
+              <button class="btn-login" @click.prevent="ChangeAction('login')">Registrar</button>
             </div>
-          </form>  
+          </form>
         </div>
-        
-        
-      <div class="registrar" v-if="action == 'registrar'" key="registrar">
-        <form method="post">
-          <div class="container-registrar">
-            <div class="img-login"></div>
-            <input type="text" class="input-login" placeholder="Email">
-            <input type="text" class="input-login" placeholder="Nome de Usuário">
-            <input type="text" class="input-login" placeholder="Senha">
-            <input type="text" class="input-login" placeholder="Confirmar Senha">
-            <button class="btn-login" @click.prevent="ChangeAction('login')">Registrar</button>
-          </div>
-        </form>
-      </div>
 
 
-      <div class="recuperar" v-if="action == 'recuperar'" key="recuperar">
-        <form method="post">
-          <div class="box-recuperar">
-              <div class="img-login"></div>
-              <div class="box-texto-recuperar" >
-                  <input type="text" class="input-login" placeholder="Email">
-                  <button class="btn-login" @click.prevent="ChangeAction('codigo')">enviar codigo</button>
+        <div class="recuperar" v-if="action == 'recuperar'" key="recuperar">
+          <form method="post">
+            <div class="box-recuperar">
+                <div class="img-login"></div>
+                <div class="box-texto-recuperar" >
+                    <input type="text" class="input-login" placeholder="Email">
+                    <button class="btn-login" @click.prevent="ChangeAction('codigo')">enviar codigo</button>
+                </div>
+                <div class="box-texto-recuperar" v-if="action == 'codigo'">
+                    <input type="number" class="input-login" placeholder="Código" pattern="[0-9]+">
+                    <button class="btn-login" @click.prevent="ChangeAction('login')">Entrar</button>
+                </div>
               </div>
-              <div class="box-texto-recuperar" v-if="action == 'codigo'">
-                  <input type="number" class="input-login" placeholder="Código" pattern="[0-9]+">
-                  <button class="btn-login" @click.prevent="ChangeAction('login')">Entrar</button>
-              </div>
-            </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-  </transition>
-</div>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -73,10 +73,6 @@ export default {
 </script>
 
 <style>
-.direita{
-
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -85,7 +81,7 @@ export default {
     opacity: 0;
 }
 .fade-login-enter-active, .fade-login-leave-active{
-    transition: ease .5s ;
+    transition: ease-out .5s ;
 }    
 .login {
   width: 100vw;
@@ -172,22 +168,22 @@ export default {
     overflow: hidden;
 }
 .direita {
-  -webkit-clip-path: ellipse(54% 58% at 0% 100%);
-  clip-path: ellipse(54% 58% at 0% 100%);
+  -webkit-clip-path: ellipse(58% 50% at 100% 100%);
+  clip-path: ellipse(58% 50% at 100% 100%);
   width: 1700px;
   height: 1000px;
   background-image: url(../assets/Poro.jpg);
-  background-position-x: 0%;
+  background-position-x: 100%;
   background-position-y: 100%;
   background-size: 60%;
   background-repeat: no-repeat;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
 }
 .img-direita { 
-    -webkit-clip-path: ellipse(54% 58% at 0% 100%);
-    clip-path: ellipse(54% 58% at 0% 100%);
+    -webkit-clip-path: ellipse(58% 50% at 100% 100%); 
+    clip-path: ellipse(58% 50% at 100% 100%);
     width: 1700px;
     height: 1000px;
     background-color: rgba(70, 48, 171, 0.6);
