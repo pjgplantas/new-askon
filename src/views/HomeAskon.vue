@@ -3,13 +3,36 @@
     <div class="nav">
         <div class="box-conteudo">
             <div class="logo-nav"></div>
-            <div class="texto-nav">reviews</div>
-            <div class="texto-nav">sobre nós</div>
-            <div class="texto-nav">perfil</div>
-            <div class="texto-nav">criar</div>
+            <a href="#"  class="texto-nav">reviews</a>
+            <a href="#" class="texto-nav">sobre nós</a>
+            <a href="#" class="texto-nav">perfil</a>
+            <a href="#" class="texto-nav">criar</a>
         </div>
         <div class="box-lateral">
             <div class="borda-lateral"></div>
+        </div>
+    </div>
+    <div class="container-resenha">
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h2>Titulo Resenha</h2>
+                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
+        </div>
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h2>Titulo Resenha</h2>
+                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
+        </div>
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h2>Titulo Resenha</h2>
+                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
         </div>
     </div>
   </div>
@@ -31,6 +54,7 @@ export default {
     height: 100%;
     position: fixed;
     background-color: #111;
+    overflow: scroll;
 }
 .nav {
     width: 600px;
@@ -85,8 +109,41 @@ export default {
     font-size: 20px;
     padding-right: 20px;
     border-right: 1px solid #4630AB;
+    text-decoration: none;
 }
 .texto-nav:last-child {
     border-right: none;
+}
+
+/* ---- Home ------ */ 
+
+.container-resenha {
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    left: 10%;
+    top: 10%;
+}
+.box-resenha {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+}
+.img-resenha {
+    width: 400px;
+    height: 180px;
+    background-color: #4630AB;
+    border-radius: 10px;
+}
+.box-texto-resenha {
+    width: 800px;
+    background-color: red;
 }
 </style>
