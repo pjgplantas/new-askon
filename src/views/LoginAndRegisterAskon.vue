@@ -1,48 +1,58 @@
 <template>
 <div class="tudo">
-  <div v-show="mostrar == 'login'" class="login">
-    <div class="box-imagem">
-        <div class="imagem"></div>
-    </div>
-    <div class="container-login">
-      <div class="img-login"></div>
-      <input type="text" class="input-login" placeholder="Nome">
-      <input type="text" class="input-login" placeholder="Senha">
-      <p class="sub-texto" @click="mostrar = 'recuperar'">esqueci minha senha</p>
-      <button class="btn-login">Entrar</button>
-      <p class="sub-texto">Novo no site?</p>
-      <button class="btn-login" @click="mostrar = 'registrar'">Registrar</button>
-    </div>
-  </div>
-  <div class="registrar" v-show="mostrar == 'registrar'">
-    <div class="box-imagem">
-        <div class="imagem"></div>
-    </div>
-    <div class="container-registrar">
-      <div class="img-login"></div>
-      <input type="text" class="input-login" placeholder="Email">
-      <input type="text" class="input-login" placeholder="Nome de Usuário">
-      <input type="text" class="input-login" placeholder="Senha">
-      <input type="text" class="input-login" placeholder="Confirmar Senha">
-      <button class="btn-login" @click="mostrar = 'login'">Registrar</button>
-    </div>
-  </div>
-  <div class="recuperar" v-show="mostrar == 'recuperar'">
-    <div class="box-imagem">
-        <div class="imagem"></div>
-    </div>
-    <div class="box-recuperar">
-        <div class="img-login"></div>
-        <div class="box-texto-recuperar" v-show="recuperar == 'email'">
+  <transition name='fade-login' mode="in-out">
+      <div>
+        <div>
+          <div :class="action == 'login' ? 'direita' : 'esquerda'">
+            <div :class="action == 'login' ? 'img-direita' : 'img-esquerda'"></div>
+          </div>
+        </div>
+          <div v-if="action == 'login'" class="login" key="login">
+          <form method="post">
+            <div class="container-login">
+              <div class="img-login"></div>
+              <input type="text" class="input-login" placeholder="Nome">
+              <input type="text" class="input-login" placeholder="Senha">
+              <p class="sub-texto" @click.prevent="action = 'recuperar'">esqueci minha senha</p>
+              <button class="btn-login">Entrar</button>
+              <p class="sub-texto">Novo no site?</p>
+              <button class="btn-login" @click.prevent="ChangeAction('registrar')">Registrar</button>
+            </div>
+          </form>  
+        </div>
+        
+        
+      <div class="registrar" v-if="action == 'registrar'" key="registrar">
+        <form method="post">
+          <div class="container-registrar">
+            <div class="img-login"></div>
             <input type="text" class="input-login" placeholder="Email">
-            <button class="btn-login" @click="recuperar = 'codigo'">enviar codigo</button>
-        </div>
-        <div class="box-texto-recuperar" v-show="recuperar == 'codigo'">
-            <input type="number" class="input-login" placeholder="Código" pattern="[0-9]+">
-            <button class="btn-login" @click="mostrar = 'login', recuperar = 'email'">Entrar</button>
-        </div>
+            <input type="text" class="input-login" placeholder="Nome de Usuário">
+            <input type="text" class="input-login" placeholder="Senha">
+            <input type="text" class="input-login" placeholder="Confirmar Senha">
+            <button class="btn-login" @click.prevent="ChangeAction('login')">Registrar</button>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="recuperar" v-if="action == 'recuperar'" key="recuperar">
+        <form method="post">
+          <div class="box-recuperar">
+              <div class="img-login"></div>
+              <div class="box-texto-recuperar" >
+                  <input type="text" class="input-login" placeholder="Email">
+                  <button class="btn-login" @click.prevent="ChangeAction('codigo')">enviar codigo</button>
+              </div>
+              <div class="box-texto-recuperar" v-if="action == 'codigo'">
+                  <input type="number" class="input-login" placeholder="Código" pattern="[0-9]+">
+                  <button class="btn-login" @click.prevent="ChangeAction('login')">Entrar</button>
+              </div>
+            </div>
+        </form>
+      </div>
     </div>
-  </div>
+  </transition>
 </div>
 </template>
 
@@ -50,32 +60,47 @@
 export default {
     data (){
         return {
-            mostrar: "login",
-            recuperar: "email"
+            action: 'login',
+            
         }
+    },
+    methods:{
+      ChangeAction(action){
+        this.action = action;
+    }
     }
 };
 </script>
 
 <style>
+.direita{
+
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+.fade-login-enter, .fade-login-leave-to{
+    opacity: 0;
+}
+.fade-login-enter-active, .fade-login-leave-active{
+    transition: ease .5s ;
+}    
 .login {
   width: 100vw;
   height: 100vh;
   background-color: #111;
   overflow: hidden;
 }
-.imagem {
+.img-esquerda {
   -webkit-clip-path: ellipse(54% 58% at 100% 100%);
   clip-path: ellipse(54% 58% at 100% 100%);
   width: 1700px;
   height: 1000px;
   background-color: rgba(70, 48, 171, 0.6);
 }
-.box-imagem {
+.esquerda {
   -webkit-clip-path: ellipse(54% 58% at 100% 100%);
   clip-path: ellipse(54% 58% at 100% 100%);
   width: 1700px;
@@ -146,7 +171,7 @@ export default {
     background-color: #111;
     overflow: hidden;
 }
-.registrar .box-imagem {
+.direita {
   -webkit-clip-path: ellipse(54% 58% at 0% 100%);
   clip-path: ellipse(54% 58% at 0% 100%);
   width: 1700px;
@@ -160,7 +185,7 @@ export default {
   bottom: 0;
   left: 0;
 }
-.registrar .imagem { 
+.img-direita { 
     -webkit-clip-path: ellipse(54% 58% at 0% 100%);
     clip-path: ellipse(54% 58% at 0% 100%);
     width: 1700px;
@@ -185,7 +210,7 @@ export default {
   background-color: #111;
   overflow: hidden;
 }
-.recuperar .box-imagem {
+.esquerda {
   -webkit-clip-path: ellipse(54% 58% at 0% 100%);
   clip-path: ellipse(54% 58% at 0% 100%);
   width: 1700px;
@@ -199,7 +224,7 @@ export default {
   bottom: 0;
   left: 0;
 }
-.recuperar .imagem { 
+.img-esquerda { 
     -webkit-clip-path: ellipse(54% 58% at 0% 100%);
     clip-path: ellipse(54% 58% at 0% 100%);
     width: 1700px;
