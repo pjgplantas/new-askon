@@ -16,21 +16,42 @@
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h1 class="text-white">Titulo Resenha</h1>
+                <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h1 class="text-white">Titulo Resenha</h1>
+                <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h1 class="text-white">Titulo Resenha</h1>
+                <h1 class="text-white titulo">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
+        </div>
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h1 class="text-white titulo">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
+        </div>
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h1 class="text-white titulo">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+            </div>
+        </div>
+        <div class="box-resenha">
+            <div class="img-resenha"></div>
+            <div class="box-texto-resenha">
+                <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
@@ -54,7 +75,7 @@ export default {
     height: 100%;
     position: fixed;
     background-color: #111;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .nav {
     width: 600px;
@@ -128,6 +149,23 @@ export default {
     right: 10%;
     top: 10%;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+}
+::-webkit-scrollbar-button {
+  width: 50px;
+  height: 150px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4630AB;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+  border: 2px solid #c9c9c9;
+  border-radius: 5px;
+}
 .box-resenha {
     width: 100%;
     height: 300px;
@@ -139,6 +177,10 @@ export default {
 .box-resenha:nth-child(even) {
     flex-direction: row-reverse;
 }
+.box-resenha:nth-child(even) .box-texto-resenha {
+    text-align: right;
+}
+
 .img-resenha {
     width: 400px;
     height: 180px;
@@ -152,6 +194,9 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+}
+.titulo {
+    width: 100%;
 }
 .text-white {
     color: #c9c9c9;
