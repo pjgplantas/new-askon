@@ -16,22 +16,22 @@
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h2>Titulo Resenha</h2>
-                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+                <h1 class="text-white">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h2>Titulo Resenha</h2>
-                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+                <h1 class="text-white">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
         <div class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
-                <h2>Titulo Resenha</h2>
-                <p>Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
+                <h1 class="text-white">Titulo Resenha</h1>
+                <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
     </div>
@@ -125,6 +125,7 @@ export default {
     flex-direction: column;
     gap: 50px;
     left: 10%;
+    right: 10%;
     top: 10%;
 }
 .box-resenha {
@@ -133,8 +134,10 @@ export default {
     position: relative;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     gap: 80px;
+}
+.box-resenha:nth-child(even) {
+    flex-direction: row-reverse;
 }
 .img-resenha {
     width: 400px;
@@ -144,6 +147,13 @@ export default {
 }
 .box-texto-resenha {
     width: 800px;
-    background-color: red;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.text-white {
+    color: #c9c9c9;
 }
 </style>
