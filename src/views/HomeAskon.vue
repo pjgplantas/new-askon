@@ -13,42 +13,42 @@
         </div>
     </div>
     <div class="container-resenha">
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha">
+        <div class="box-resenha" data-aos="fade-right">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
@@ -64,7 +64,6 @@ export default {
 
 }
 </script>
-
 <style>
 * {
     margin: 0;
