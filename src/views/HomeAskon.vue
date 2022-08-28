@@ -13,42 +13,42 @@
         </div>
     </div>
     <div class="container-resenha">
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-right" class="box-resenha" >
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-left" class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-right" class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-left" class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-right" class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
                 <p class="text-white">Descrição da Resenha Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium veritatis doloremque cupiditate iusto autem dignissimos voluptatem quasi voluptate, vel assumenda soluta itaque, eaque rem ipsum eligendi aperiam dolores enim et.</p>
             </div>
         </div>
-        <div class="box-resenha" data-aos="fade-right">
+        <div data-aos="fade-left" class="box-resenha">
             <div class="img-resenha"></div>
             <div class="box-texto-resenha">
                 <h1 class="text-white titulo">Titulo Resenha</h1>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+
 export default {
 
 }
@@ -72,7 +73,7 @@ export default {
 .tudo {
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: relative;
     background-color: #111;
     overflow-y: scroll;
 }
@@ -143,10 +144,10 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
     left: 10%;
     right: 10%;
-    top: 10%;
+    margin-top: 120px;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -182,7 +183,7 @@ export default {
 
 .img-resenha {
     width: 400px;
-    height: 180px;
+    height: 220px;
     background-color: #4630AB;
     border-radius: 10px;
 }
