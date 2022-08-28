@@ -12,6 +12,7 @@
             <div class="borda-lateral"></div>
         </div>
     </div>
+        <input type="text" class="busca">
     <div class="container-resenha">
         <div data-aos-duration="800" data-aos="fade-right" class="box-resenha" >
             <div data-aos="flip-left" data-aos-duration="800" class="img-resenha"></div>
@@ -138,7 +139,18 @@ export default {
 .texto-nav:last-child {
     border-right: none;
 }
-
+.busca {
+    width: 500px;
+    height: 20px;
+    background-color: #111;
+    border-radius: 10px;
+    border: 1px solid #4630AB;
+    position: absolute;
+    right: 300px;
+    top: 43px;
+    color: #c9c9c9;
+    padding: 10px;
+}
 /* ---- Home ------ */ 
 
 .container-resenha {
