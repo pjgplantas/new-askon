@@ -13,6 +13,9 @@
         </div>
     </div>
         <input type="text" class="busca">
+        <div class="sair">
+            <mdiDoorOpen class="icone-sair"/>
+        </div>
     <div class="container-resenha">
         <div data-aos-duration="800" data-aos="fade-right" class="box-resenha" >
             <div data-aos="flip-left" data-aos-duration="800" class="img-resenha"></div>
@@ -61,9 +64,11 @@
 </template>
 
 <script>
-
+import mdiDoorOpen from 'vue-material-design-icons/DoorOpen.vue';
 export default {
-
+    components: {
+        mdiDoorOpen,
+    }
 }
 </script>
 <style>
@@ -78,13 +83,13 @@ export default {
     background-color: #111;
     overflow-y: scroll;
 }
-.tudo::-webkit-scrollbar {
-    width: 0;
-}
 .nav {
     width: 600px;
     height: 120px;
     display: flex;
+}
+::-webkit-scrollbar { 
+    width: 0;
 }
 .box-lateral {
     -webkit-clip-path: polygon(0 0, 100% 0%, 33% 100%, 0% 100%);
@@ -146,10 +151,26 @@ export default {
     border-radius: 10px;
     border: 1px solid #4630AB;
     position: absolute;
-    right: 300px;
+    right: 400px;
     top: 43px;
     color: #c9c9c9;
     padding: 10px;
+}
+.sair {
+    width: 150px;
+    height: 150px;
+    background-color: #4630AB;
+    clip-path: ellipse(100% 100% at 100% -10%);
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+}
+.icone-sair {
+    scale: 2.5;
+    margin: 50px;
 }
 /* ---- Home ------ */ 
 
@@ -163,24 +184,6 @@ export default {
     left: 10%;
     right: 10%;
     margin-top: 120px;
-}
-::-webkit-scrollbar {
-  width: 10px;
-  height: 15px;
-  background-color: #111;
-}
-::-webkit-scrollbar-button {
-  width: 50px;
-  height: 150px;
-}
-::-webkit-scrollbar-thumb {
-  background: #4630AB;
-  border-radius: 50px;
-}
-::-webkit-scrollbar-track {
-  background: #111;
-  border: 2px solid #c9c9c9;
-  border-radius: 5px;
 }
 .box-resenha {
     width: 100%;
