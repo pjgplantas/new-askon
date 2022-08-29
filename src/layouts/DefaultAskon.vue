@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Header />
-    <router-view></router-view>
+    <NavBarAskon/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Header from "@/components/NavBarAskon.vue";
+import NavBarAskon from "@/components/NavBarAskon.vue";
 export default {
   components: {
-    Header,
+    NavBarAskon,
   },
 };
 </script>
