@@ -1,21 +1,5 @@
 <template>
   <div class="tudo">
-    <div class="nav">
-        <div class="box-conteudo">
-            <div class="logo-nav"></div>
-            <a href="#"  class="texto-nav">reviews</a>
-            <a href="#" class="texto-nav">sobre nós</a>
-            <a href="#" class="texto-nav">perfil</a>
-            <a href="#" class="texto-nav">criar</a>
-        </div>
-        <div class="box-lateral">
-            <div class="borda-lateral"></div>
-        </div>
-    </div>
-        <input type="text" class="busca">
-        <div class="sair">
-            <mdiDoorOpen class="icone-sair"/>
-        </div>
     <div class="container-resenha">
         <div data-aos-duration="800" data-aos="fade-right" class="box-resenha" >
             <div data-aos="flip-left" data-aos-duration="800" class="img-resenha"></div>
@@ -64,11 +48,8 @@
 </template>
 
 <script>
-import mdiDoorOpen from 'vue-material-design-icons/DoorOpen.vue';
 export default {
-    components: {
-        mdiDoorOpen,
-    }
+
 }
 </script>
 <style>
@@ -155,22 +136,6 @@ export default {
     top: 43px;
     color: #c9c9c9;
     padding: 10px;
-}
-.sair {
-    width: 150px;
-    height: 150px;
-    background-color: #4630AB;
-    clip-path: ellipse(100% 100% at 100% -10%);
-    position: absolute;
-    right: 0px;
-    top: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: right;
-}
-.icone-sair {
-    scale: 2.5;
-    margin: 50px;
 }
 /* ---- Home ------ */ 
 
