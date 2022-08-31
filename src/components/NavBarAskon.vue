@@ -1,5 +1,5 @@
 <template>
-  <div class="tudo">
+  <div class="tudo-nav">
     <div class="nav">
       <div class="box-conteudo">
         <div class="logo-nav"></div>
@@ -29,12 +29,12 @@ export default {
 </script>
 
 <style>
-.tudo {
+.tudo-nav {
   width: 100%;
   height: 100%;
   position: relative;
   background-color: #111;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .nav {
   width: 600px;
