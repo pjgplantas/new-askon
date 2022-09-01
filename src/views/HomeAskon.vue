@@ -8,13 +8,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
       <div data-aos-duration="800" data-aos="fade-left" class="box-resenha">
@@ -24,13 +31,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
       <div data-aos-duration="800" data-aos="fade-right" class="box-resenha">
@@ -40,13 +54,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
       <div data-aos-duration="800" data-aos="fade-left" class="box-resenha">
@@ -56,13 +77,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
       <div data-aos-duration="800" data-aos="fade-right" class="box-resenha">
@@ -72,13 +100,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
       <div data-aos-duration="800" data-aos="fade-left" class="box-resenha">
@@ -88,13 +123,20 @@
           class="img-resenha"
         ></div>
         <div class="box-texto-resenha">
-          <h1 class="text-white titulo">Titulo Resenha</h1>
+          <h1 class="titulo">Titulo Resenha</h1>
           <p class="text-white">
             Descrição da Resenha Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Laudantium veritatis doloremque cupiditate iusto
             autem dignissimos voluptatem quasi voluptate, vel assumenda soluta
             itaque, eaque rem ipsum eligendi aperiam dolores enim et.
           </p>
+          <div class="box-estrelas">
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+            <mdiStar class="icone-estrela" />
+          </div>
         </div>
       </div>
     </div>
@@ -113,7 +155,12 @@
 </template>
 
 <script>
-export default {};
+import mdiStar from "vue-material-design-icons/Star.vue";
+export default {
+  components: {
+    mdiStar,
+  },
+};
 </script>
 <style>
 * {
@@ -212,7 +259,10 @@ export default {};
   flex-direction: row-reverse;
 }
 .box-resenha:nth-child(even) .box-texto-resenha {
-  text-align: right;
+  text-align: right; 
+}
+.box-resenha:nth-child(even) .box-estrelas {
+  left: 0;
 }
 
 .img-resenha {
@@ -231,9 +281,23 @@ export default {};
 }
 .titulo {
   width: 100%;
+  color: #c9c9c9;
 }
 .text-white {
   color: #c9c9c9;
+  text-align: justify;
+}
+.box-estrelas {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.icone-estrela {
+  color: #4630ab;
+  scale: 1.5;
 }
 /* --------- Footer ------------ */
 .footer {
