@@ -4,7 +4,7 @@ import HomeAskon from "@/views/HomeAskon.vue";
 import CriarResenhaAskon from "@/views/CriarResenhaAskon.vue";
 import AboutAskon from "@/components/AboutAskon.vue";
 import LoginAskon from "@/views/LoginAndRegisterAskon.vue";
-import Resenha from "@/views/ResenhaAskon.vue";
+import Resenha from "@/views/IndividualAskon.vue";
 import PerfilAskon from "@/views/PerfilAskon.vue";
 
 Vue.use(VueRouter);
