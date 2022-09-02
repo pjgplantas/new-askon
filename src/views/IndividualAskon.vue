@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section>
         <div>
             <ResenhasAskon
@@ -24,8 +24,8 @@
 import ResenhasAskon from "@/components/ResenhasAskon.vue";
 export default {
   components: { ResenhasAskon },
-  props: ['resenha'],
+  
 };
 </script>
 
-<style></style>
+<style></style> -->
