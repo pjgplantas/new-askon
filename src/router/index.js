@@ -6,6 +6,7 @@ import AboutAskon from "@/components/AboutAskon.vue";
 import LoginAskon from "@/views/LoginAndRegisterAskon.vue";
 import Resenha from "@/views/IndividualAskon.vue";
 import PerfilAskon from "@/views/PerfilAskon.vue";
+import IndividualAskon from "@/views/IndividualAskon.vue";
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,10 @@ const routes = [
         path: "/resenha",
         component: Resenha,
       },
+      {
+        path: "/individual",
+        component: IndividualAskon,
+      }
     ],
   },
   {
