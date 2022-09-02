@@ -65,7 +65,7 @@ export default {
   border-radius: 10px;
   border: 1px solid #4630ab;
   position: absolute;
-  right: 300px;
+  right: 15%;
   top: 43px;
   color: #c9c9c9;
   padding: 10px;
